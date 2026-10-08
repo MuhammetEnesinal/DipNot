@@ -1,0 +1,41 @@
+# Claude ve dökümantasyon (GitHub'a gitmez)
+.claude/
+CLAUDE.md
+*.md
+!README.md
+docs/
+
+# Gizli bilgiler
+.env
+.env.*
+!.env.example
+secrets.json
+appsettings.*.json
+*.pem
+*.key
+*.pfx
+*.crx
+
+# .NET
+bin/
+obj/
+.vs/
+*.user
+TestResults/
+
+# Node ve WXT
+node_modules/
+.output/
+.wxt/
+web-ext.config.ts
+*.zip
+
+# Editör ve işletim sistemi
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Kayıtlar
+*.log
+logs/

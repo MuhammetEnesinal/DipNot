@@ -1,0 +1,10 @@
+services:
+  api:
+    build:
+      context: ./api
+    ports:
+      - "8080:8080"
+    develop:
+      watch:
+        - action: rebuild
+          path: ./api/src
