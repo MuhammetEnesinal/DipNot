@@ -5,6 +5,12 @@ CLAUDE.md
 !README.md
 docs/
 
+# Testler (GitHub'a gitmez)
+*.test.ts
+*.test.tsx
+vitest.config.ts
+api/tests/
+
 # Gizli bilgiler
 .env
 .env.*

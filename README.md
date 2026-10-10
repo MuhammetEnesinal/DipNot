@@ -34,7 +34,7 @@ dipnot/
 
 ## Çalıştırma
 
-Gereksinimler: Docker, Node.js, Chrome.
+Gereksinimler: Docker (sunucu ve derleme için), Node.js 24 ve Chrome (uzantıyı geliştirirken).
 
 Sunucu:
 
@@ -42,13 +42,22 @@ Sunucu:
 docker compose up --build
 ```
 
-Uzantı (ayrı terminalde):
+Uzantı geliştirme (ayrı terminalde, Chrome penceresi açar):
 
 ```bash
 cd client
 npm install
 npm run dev
 ```
+
+Uzantının tip denetimi ve derlemesi (Docker'da, makineden bağımsız):
+
+```bash
+docker compose --profile client build client
+docker build --target artifact --output type=local,dest=client/.output/docker client
+```
+
+İkinci komut mağazaya yüklenecek `.zip` dosyasını `client/.output/docker/` içine çıkarır.
 
 ## Güvenlik
 

@@ -8,3 +8,9 @@ services:
       watch:
         - action: rebuild
           path: ./api/src
+
+  client:
+    profiles: ["client"]
+    build:
+      context: ./client
+      target: build

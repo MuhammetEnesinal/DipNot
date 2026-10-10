@@ -28,6 +28,6 @@ export function extractSource(mode: SourceMode, doc: Document, win: Window): Ext
 
   return {
     ok: true,
-    source: { ...readMetadata(doc, win.location.href), mode, passages },
+    source: { ...readMetadata(doc, win.location.href), pageUrl: win.location.href, mode, passages },
   };
 }

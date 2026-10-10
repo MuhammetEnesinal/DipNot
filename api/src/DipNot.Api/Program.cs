@@ -7,5 +7,3 @@ var app = builder.Build();
 app.MapHealthEndpoints();
 
 app.Run();
-
-public partial class Program;

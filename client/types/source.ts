@@ -7,6 +7,7 @@ export type SourceMode = 'page' | 'selection';
 
 export type ExtractedSource = {
   url: string;
+  pageUrl?: string;
   title: string;
   siteName?: string;
   author?: string;
@@ -14,6 +15,12 @@ export type ExtractedSource = {
   lang?: string;
   mode: SourceMode;
   passages: Passage[];
+};
+
+export type Source = ExtractedSource & {
+  id: string;
+  addedAt: string;
+  truncated: boolean;
 };
 
 export type ExtractionResult =
